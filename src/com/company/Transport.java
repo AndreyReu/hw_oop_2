@@ -1,39 +1,32 @@
 package com.company;
 
 public class Transport {
-    private String modelName;
-    private int wheelsCount;
+    private final String modelName;
+    private final int wheelsCount;
 
     public Transport(String modelName, int wheelsCount) {
         this.modelName = modelName;
         this.wheelsCount = wheelsCount;
     }
 
-    public static void updateTyre(Transport transport) {
-        System.out.println("Меняем покрышку");
+    public static void addToUpdateTyre(UpdateTyre transport) {
+        transport.updateTheseTyres();
     }
 
-    public static void checkEngine(Transport transport) {
-        System.out.println("Проверяем двигатель");
+    public static void addToCheckEngine(CheckEngine transport) {
+        transport.checkThisEngine();
     }
 
-    public static void checkTrailer(Transport transport) {
-        System.out.println("Проверяем прицеп");
+    public static void addToCheckTrailer(CheckTrailer transport) {
+        transport.checkThisTrailer();
     }
 
     public String getModelName() {
         return modelName;
     }
 
-    public void setModelName(String modelName) {
-        this.modelName = modelName;
-    }
-
     public int getWheelsCount() {
         return wheelsCount;
     }
 
-    public void setWheelsCount(int wheelsCount) {
-        this.wheelsCount = wheelsCount;
-    }
 }
